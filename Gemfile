@@ -57,4 +57,5 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails', '~> 3.0.0'
   gem 'capybara-page-object', '~> 0.2.1'
+  gem 'rake', '~> 0.9.2'
 end
