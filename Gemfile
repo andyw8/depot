@@ -54,4 +54,5 @@ gem 'haml', '~> 3.1.1'
 group :development, :test do
   gem 'cucumber-rails', '~> 1.3.0'
   gem 'rspec', '~> 2.9.0'
+  gem 'database_cleaner'
 end
