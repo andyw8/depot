@@ -55,4 +55,5 @@ group :development, :test do
   gem 'cucumber-rails', '~> 1.3.0'
   gem 'rspec', '~> 2.9.0'
   gem 'database_cleaner'
+  gem 'factory_girl_rails', '~> 3.0.0'
 end
