@@ -5,3 +5,9 @@ end
 Then /^those products should be available to buy$/ do
   @page.product_titles.should =~ @products.collect(&:title)
 end
+
+Given /^the following products:$/ do |table|
+  table.raw.flatten.each do |p|
+    FactoryGirl.create(:product, :title => p)
+  end
+end

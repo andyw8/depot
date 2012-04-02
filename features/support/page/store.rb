@@ -11,5 +11,11 @@ module Page
     def cart
       Component::Cart.new find('#cart')
     end
+    
+    def add_product(title)
+      header = find('h3', :text => title)
+      entry = header.parent
+      entry.click_button 'Add to Cart'
+    end
   end
 end
