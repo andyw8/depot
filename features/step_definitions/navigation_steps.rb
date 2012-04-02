@@ -1,3 +1,4 @@
 When /^I visit the store$/ do
-  visit store_path
+  @page = Page::Store.new
+  @page.visit
 end

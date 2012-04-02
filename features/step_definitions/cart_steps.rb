@@ -1,3 +1,3 @@
-Then /^I should not have a cart$/ do
-  find('#cart').should_not be_visible
+Then /^the cart should be empty$/ do
+  @page.cart.should be_empty
 end
