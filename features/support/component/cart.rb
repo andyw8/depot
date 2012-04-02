@@ -5,20 +5,17 @@ module Component
     end
 
     def contents
-      r = []
-      rows.each do |row|
-        multiplication_sign = "\u00d7"
-        quantity = row.all('td')[0].text.gsub(multiplication_sign, '') # the 1st column in the table
-        product = row.all('td')[1].text # the 2nd column in the table
-        r << {'product' => product, 'quantity' => quantity}
+      rows.map do |row|
+        {'product' => row.product, 'quantity' => row.quantity}
       end
-      r
     end
 
     private
 
     def rows
-      all('table tr:not(.total_line)')
+      all('table tr:not(.total_line)').map do |row|
+        Component::CartRow.new(row)
+      end
     end
   end
 end

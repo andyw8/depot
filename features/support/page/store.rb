@@ -14,7 +14,7 @@ module Page
     
     def add_product(title)
       header = find('h3', :text => title)
-      entry = header.parent
+      entry = header.find(:xpath, '..') # TODO why doesn't parent work here?
       entry.click_button 'Add to Cart'
     end
   end
