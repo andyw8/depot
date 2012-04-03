@@ -6,11 +6,11 @@ Feature: Cart
     The visitor does not have a cart until an item is added
 
     When I visit the store
-    Then the cart should be empty
+    Then my cart should be empty
 
   Scenario: Add item to cart
 
-    Given the following products:
+    Given the products:
       | CoffeeScript         |
       | Programming Ruby 1.9 |
     When I visit the store
@@ -23,7 +23,7 @@ Feature: Cart
 
     Adding multiple copies of an item is allowed. They should appear in a single cart row.
 
-    Given the following products:
+    Given the products:
       | CoffeeScript         |
       | Programming Ruby 1.9 |
     When I visit the store
@@ -32,3 +32,24 @@ Feature: Cart
     Then my cart should contain:
       | product              | quantity |
       | Programming Ruby 1.9 | 2        |
+
+  Scenario: Add different items to cart
+
+    Items should appear in the order they were added
+
+    Given the products:
+      | CoffeeScript         |
+      | Programming Ruby 1.9 |
+    When I visit the store
+    And I add "Programming Ruby 1.9" to my cart
+    And I add "CoffeeScript" to my cart
+    Then my cart should contain:
+      | product              | quantity |
+      | Programming Ruby 1.9 | 1        |
+      | CoffeeScript         | 1        |
+
+  # Scenario: Empty cart
+  #
+  #   Given my cart contains products
+  #   When I empty my cart
+  #   Then my cart should be empty

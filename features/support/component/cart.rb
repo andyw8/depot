@@ -3,6 +3,10 @@ module Component
     def empty?
       rows.empty?
     end
+    
+    def empty!
+      click_button 'Empty cart'
+    end
 
     def contents
       rows.map do |row|
