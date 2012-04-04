@@ -3,5 +3,5 @@ Before('@product') do |scenario|
 end
 
 After do |scenario|
-  save_and_open_page if scenario.status == :failed && '1' == ENV['USE_LAUNCHY']
+  save_and_open_page if scenario.status == :failed && '1' == ENV['LAUNCHY']
 end

@@ -1,4 +1,4 @@
-module Page 
+module Pages
   class Store < CapybaraPageObject::Node
     def product_titles
       all('#main .entry h3').collect(&:text)

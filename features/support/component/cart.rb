@@ -3,9 +3,14 @@ module Component
     def empty?
       rows.empty?
     end
-    
+
+    # TODO can this be done without referring to source?
     def empty!
-      click_button 'Empty cart'
+      source.click_button('Empty cart')
+    end
+
+    def checkout!
+      source.click_button('Checkout')
     end
 
     def contents

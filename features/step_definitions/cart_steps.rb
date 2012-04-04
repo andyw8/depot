@@ -12,15 +12,19 @@ Then /^my cart should contain:$/ do |table|
 end
 
 Given /^my cart contains products$/ do
-  @products = []
-  2.times { @products << FactoryGirl.create(:product) }
-  @page = Page::Store.new
-  @page.visit
-  @products.each do |product|
-    @page.add_product product.title
-  end
+  add_some_products_to_cart
 end
 
 When /^I empty my cart$/ do
   @page.cart.empty!
+end
+
+def add_some_products_to_cart
+  @products = []
+  2.times { @products << FactoryGirl.create(:product) }
+  @page = Pages::Store.new
+  @page.visit
+  @products.each do |product|
+    @page.add_product product.title
+  end
 end
