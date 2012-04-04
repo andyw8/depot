@@ -1,5 +1,5 @@
 module Pages
-  class Store < CapybaraPageObject::Node
+  class Store < Pages::Base
     def product_titles
       all('#main .entry h3').collect(&:text)
     end

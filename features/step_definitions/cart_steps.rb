@@ -15,6 +15,10 @@ Given /^my cart contains products$/ do
   add_some_products_to_cart
 end
 
+Given /^my cart is empty$/ do
+  # no-op
+end
+
 When /^I empty my cart$/ do
   @page.cart.empty!
 end

@@ -1,3 +1,4 @@
+# The product list will break if there isn't at least one product
 Before('@product') do |scenario|
   FactoryGirl.create(:product)
 end

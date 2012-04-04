@@ -1,8 +1,14 @@
 module Pages
   module Orders
-    class New < CapybaraPageObject::Node
+    class New < Pages::Base
       def checkout_form
         Component::CheckoutForm.new(find('.depot_form'))
+      end
+
+      def path
+        # TODO use rails names routes here?
+        # can we have a sensible default?
+        '/orders/new'
       end
     end
   end

@@ -12,6 +12,11 @@ module Component
     def checkout!
       source.click_button('Checkout')
     end
+    
+    def checkout_available?
+      # TODO can this be improved?
+      source[:style] != "display: none"
+    end
 
     def contents
       rows.map do |row|
