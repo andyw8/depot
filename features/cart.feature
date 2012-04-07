@@ -21,7 +21,7 @@ Feature: Cart
 
   Scenario: Add item to cart again
 
-    Adding multiple copies of an item is allowed. They should appear in a single cart row.
+    Multiple copies of an item can be added. They should appear in a single cart row.
 
     Given the products:
       | CoffeeScript         |
@@ -48,8 +48,8 @@ Feature: Cart
       | Programming Ruby 1.9 | 1        |
       | CoffeeScript         | 1        |
 
-  # Scenario: Empty cart
-  #
-  #   Given my cart contains products
-  #   When I empty my cart
-  #   Then my cart should be empty
+  Scenario: Empty cart
+
+    Given my cart contains products
+    When I empty my cart
+    Then my cart should be empty
