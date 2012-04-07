@@ -3,6 +3,8 @@ Feature: Checkout
   @product
   Scenario: Cart is empty
 
+    An order must contain at least one item
+
     Given my cart is empty
     Then I should not be able to check out
 
