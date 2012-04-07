@@ -1,3 +1,0 @@
-== Build Status {<img src="https://secure.travis-ci.org/andyw8/depot.png"/>}[http://travis-ci.org/andyw8/depot]
-
-== Dependency Status {<img src="https://gemnasium.com/andyw8/depot.png?travis"/>}[https://gemnasium.com/andyw8/depot]
