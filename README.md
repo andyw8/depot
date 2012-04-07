@@ -1,5 +1,4 @@
 [![Build Status](https://secure.travis-ci.org/andyw8/depot.png)](http://travis-ci.org/andyw8/depot)
-[![Dependency Status](https://secure.travis-ci.org/andyw8/depot.png)](http://travis-ci.org/andyw8/depot)
 
 ## Overview ##
 
