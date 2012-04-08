@@ -1,4 +1,4 @@
-module Component
+module Components
   class Cart < CapybaraPageObject::Node
     def empty?
       rows.empty?
@@ -28,7 +28,7 @@ module Component
 
     def rows
       all('table tr:not(.total_line)').map do |row|
-        Component::CartRow.new(row)
+        Components::CartRow.new(row)
       end
     end
   end

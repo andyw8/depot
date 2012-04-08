@@ -4,7 +4,7 @@ module Pages
   module Admin
     class Index < Pages::Base
       def login_form
-        Component::LoginForm.new(find('.depot_form'))
+        Components::LoginForm.new(find('.depot_form'))
       end
       
       def has_login_form?

@@ -10,7 +10,7 @@ module Pages
       end
       
       def orders_table
-        Component::OrdersTable.new(find('table'))
+        Components::OrdersTable.new(find('table'))
       end
     end
   end

@@ -2,7 +2,7 @@ module Pages
   class Base < CapybaraPageObject::Page
 
     def cart
-      Component::Cart.new find('#cart')
+      Components::Cart.new find('#cart')
     end
 
     def checkout_available?

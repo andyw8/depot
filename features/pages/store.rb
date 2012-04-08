@@ -9,7 +9,7 @@ module Pages
     end
     
     def cart
-      Component::Cart.new find('#cart')
+      Components::Cart.new find('#cart')
     end
     
     def add_product(title)

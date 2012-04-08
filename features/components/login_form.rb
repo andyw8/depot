@@ -1,4 +1,4 @@
-module Component
+module Components
   class LoginForm < CapybaraPageObject::Form
     def sign_in(name, password)
       source.fill_in 'Name', :with => name

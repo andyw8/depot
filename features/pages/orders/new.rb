@@ -2,7 +2,7 @@ module Pages
   module Orders
     class New < Pages::Base
       def checkout_form
-        Component::CheckoutForm.new(find('.depot_form'))
+        Components::CheckoutForm.new(find('.depot_form'))
       end
 
       def path

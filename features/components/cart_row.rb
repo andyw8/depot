@@ -1,4 +1,4 @@
-module Component
+module Components
   class CartRow < CapybaraPageObject::Node
 
     # table doesn't include IDs or class names so we'll to use to the column ordering

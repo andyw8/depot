@@ -1,4 +1,4 @@
-module Component
+module Components
   class CheckoutForm < CapybaraPageObject::Form
     # TODO how to avoid needing source here?
     # TODO shouldn't copybara page object handle this?

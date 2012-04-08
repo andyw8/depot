@@ -1,4 +1,4 @@
-module Component
+module Components
   class OrdersTableRow
     
     def initialize(row)
