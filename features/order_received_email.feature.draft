@@ -1,0 +1,10 @@
+Feature: Order Received Email
+
+  Given I have these items in my cart:
+    | product              | quantity |
+    | CoffeeScript         | 1        |
+    | Programming Ruby 1.9 | 2        |
+  When I place the order
+  Then I should receive an email
+  And the email should address me by my name
+  And the email should list my order's contents and quantities
