@@ -1,5 +1,6 @@
 module Pages
   class Base < CapybaraPageObject::Node
+
     def cart
       Component::Cart.new find('#cart')
     end
@@ -10,6 +11,10 @@ module Pages
 
     def errors
       all('#error_explanation ul li').collect(&:text)
+    end
+
+    def notice
+      find('#notice').text
     end
   end
 end

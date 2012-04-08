@@ -8,3 +8,10 @@ FactoryGirl.define do
     price 9.99
   end
 end
+
+FactoryGirl.define do
+  factory :user do
+    name 'admin'
+    password 'password'
+  end
+end

@@ -1,6 +1,7 @@
 module Component
   class CheckoutForm < CapybaraPageObject::Form
     # TODO how to avoid needing source here?
+    # TODO shouldn't copybara page object handle this?
     def name=(name)
       source.fill_in 'Name', :with => name
     end
