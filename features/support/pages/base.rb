@@ -1,5 +1,5 @@
 module Pages
-  class Base < CapybaraPageObject::Node
+  class Base < CapybaraPageObject::Page
 
     def cart
       Component::Cart.new find('#cart')

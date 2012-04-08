@@ -5,7 +5,6 @@ end
 
 Then /^I should not be able to check out$/ do
   @page = Pages::Orders::New.new
-  @page.visit
   @page.checkout_available?.should be_false
 end
 
