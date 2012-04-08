@@ -6,13 +6,13 @@ Feature: Admin
     Then I should be prompted to sign in
 
   @user
-  Scenario: login with valid credentials
+  Scenario: Login with valid credentials
 
     When I visit the seller admin
     And I login with valid credentials
     Then I should be welcomed
 
-  Scenario: Attempt to login with invalid credentials
+  Scenario: Login with invalid credentials
 
     When I visit the seller admin
     And I login with invalid credentials
