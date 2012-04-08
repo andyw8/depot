@@ -7,6 +7,9 @@ Then /^the order should be placed$/ do
   @page = Pages::Orders::Index.new
   @page.visit
   @page.should have(1).orders
+end
+
+Then /^the customer's details should be captured$/ do
   order = @page.orders.first
   order.name.should == @customer[:name]
   order.address.should == @customer[:address]
