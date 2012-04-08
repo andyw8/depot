@@ -30,10 +30,16 @@ module CheckoutHelpers
     @cart = @page.cart
     @page.cart.checkout!
     @form = Pages::Orders::New.new.checkout_form
-    @form.name = 'Joe Bloggs'
-    @form.address = '1 Main St'
-    @form.email = 'joe@example.com'
-    @form.pay_type = 'Check'
+    @customer = {
+      :name => 'Joe Bloggs',
+      :address => '1 Main St',
+      :email => 'joe@example.com',
+      :pay_type => 'Check'
+    }
+    @form.name = @customer[:name]
+    @form.address = @customer[:address]
+    @form.email = @customer[:email]
+    @form.pay_type = @customer[:pay_type]
   end
 end
 
