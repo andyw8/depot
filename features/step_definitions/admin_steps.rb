@@ -15,7 +15,7 @@ Then /^I should be welcomed$/ do
 end
 
 When /^I login with invalid credentials$/ do
-  user = FactoryGirl.create(:user)
+  user = create(:user)
   @page = Pages::Admin::Index.new
   @page.sign_in user.name, 'invalid'
 end
@@ -25,7 +25,7 @@ Then /^I should be denied access$/ do
 end
 
 def sign_in_to_seller_admin
-  @user = FactoryGirl.create(:user)
+  @user = create(:user)
   @page = Pages::Admin::Index.new
   @page.sign_in @user.name, @user.password
 end

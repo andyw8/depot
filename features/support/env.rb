@@ -9,6 +9,7 @@ Spork.prefork do
   Capybara.default_selector = :css
   DatabaseCleaner.strategy = :truncation # since I don't think Sqlite supports transactions (TODO check this)
   Cucumber::Rails::Database.javascript_strategy = :truncation
+  World(FactoryGirl::Syntax::Methods)
 end
 
 Spork.each_run do

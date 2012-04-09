@@ -25,7 +25,7 @@ end
 
 def add_some_products_to_cart
   @products = []
-  2.times { @products << FactoryGirl.create(:product) }
+  2.times { @products << create(:product) }
   @page = Pages::Store.new
   @products.each do |product|
     @page.add_product product.title
