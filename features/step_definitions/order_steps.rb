@@ -4,7 +4,7 @@ end
 
 Then /^the order should be placed$/ do
   sign_in_to_seller_admin
-  @page = Pages::Orders::Index.new
+  @page = Pages::Orders::Index.visit
   @page.should have(1).orders
 end
 

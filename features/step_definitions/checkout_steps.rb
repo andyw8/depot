@@ -4,7 +4,7 @@ Given /^I am checking out with valid details$/ do
 end
 
 Then /^I should not be able to check out$/ do
-  @page = Pages::Orders::New.new
+  @page = Pages::Orders::New.visit
   @page.checkout_available?.should be_false
 end
 
@@ -25,10 +25,10 @@ end
 
 module CheckoutHelpers
   def checkout_with_valid_details
-    @page = Pages::Store.new
+    @page = Pages::Store.visit
     @cart = @page.cart
     @page.cart.checkout!
-    @form = Pages::Orders::New.new.checkout_form
+    @form = Pages::Orders::New.visit.checkout_form
     @customer = {
       :name => 'Joe Bloggs',
       :address => '1 Main St',

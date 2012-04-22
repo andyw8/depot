@@ -4,9 +4,7 @@ module Pages
       all('#main .entry h3').collect(&:text)
     end
 
-    def path
-      '/'
-    end
+    path ''
     
     def cart
       Components::Cart.new find('#cart')

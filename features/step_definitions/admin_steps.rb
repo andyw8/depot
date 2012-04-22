@@ -3,7 +3,7 @@ Then /^I should be prompted to sign in$/ do
 end
 
 When /^I visit the seller admin$/ do
-  @page = Pages::Admin::Index.new
+  @page = Pages::Admin::Index.visit
 end
 
 When /^I login with valid credentials$/ do
@@ -16,7 +16,7 @@ end
 
 When /^I login with invalid credentials$/ do
   user = create(:user)
-  @page = Pages::Admin::Index.new
+  @page = Pages::Admin::Index.visit
   @page.sign_in user.name, 'invalid'
 end
 
@@ -26,6 +26,6 @@ end
 
 def sign_in_to_seller_admin
   @user = create(:user)
-  @page = Pages::Admin::Index.new
+  @page = Pages::Admin::Index.visit
   @page.sign_in @user.name, @user.password
 end

@@ -3,16 +3,15 @@ require_relative '../base' # TODO why is this needed?
 module Pages
   module Admin
     class Index < Pages::Base
-      def login_form
-        Components::LoginForm.new(find('.depot_form'))
+
+      path 'admin'
+
+      component(:login_form) do
+        Components::LoginForm.new find('.depot_form')
       end
       
       def has_login_form?
-        has_content?('Please Log In')
-      end
-
-      def path
-        '/admin'
+        source.has_content?('Please Log In')
       end
       
       def sign_in(*args)
@@ -20,7 +19,7 @@ module Pages
       end
       
       def welcomed?
-        has_content?('Welcome')
+        source.has_content?('Welcome')
       end
       
       def denied_access?

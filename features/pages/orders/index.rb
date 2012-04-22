@@ -1,9 +1,7 @@
 module Pages
   module Orders
     class Index < Pages::Base
-      def path
-        '/orders'
-      end
+      path 'orders'
 
       def orders
         orders_table.orders
